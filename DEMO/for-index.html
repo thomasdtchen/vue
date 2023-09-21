@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+    <body>
+        <div id="app">
+        <div>
+            <input type="text" v-model="name">
+            <button @click="addNewUser">Add User</button>
+        </div>
+            <ul>
+                <li v-for="(user, index) in userList" :key="user.id"> <input type="checkbox"/> name: {{user.name}}</li>
+            </ul>
+        </div>
+    </body>
+
+    <script>
+        const vm = {
+            data: function(){
+                return{
+                    userList: [
+                        {id: 1, name: 'ZhangShan'},
+                        {id: 2, name: 'LiShi'},
+                    ],
+                    name: '',
+                    nextId: 3
+                }
+            },
+            methods: {
+                addNewUser(){
+                    this.userList.unshift({ id: this.nextId, name: this.name })
+                    this.name = ''
+                    this.nextId++
+                }
+            }
+        }
+
+        const app = Vue.createApp(vm)
+        app.mount('#app')
+    </script>
+</html>

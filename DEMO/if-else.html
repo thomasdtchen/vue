@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p v-if="num > 5"> >5 </p>
+            <p v-else> l=5 </p>
+
+            <p v-if="type === 'A'"> A </p>
+            <p v-else-if="type === 'B'"> B </p>
+            <p v-else> C </p>
+        </div>
+    </body>
+
+    <script>
+        const vm = {
+            data: function(){
+                return{
+                    num: 9,
+                    type: 'B'
+                }
+            },
+        }
+
+        const app = Vue.createApp(vm)
+        app.mount('#app')
+    </script>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <h3>count value : {{ count }}</h3>
+            <button v-on:click="addCount">+1</button>
+            <button @click="count-=1">-1</button>
+        </div>
+    </body>
+
+    <script>
+        const vm = {
+            data: function(){
+                return{
+                    count: 9,
+                }
+            },
+            methods:{
+                addCount(){
+                    this.count += 1
+                }
+            }
+        }
+
+        const app = Vue.createApp(vm)
+        app.mount('#app')
+    </script>
+</html>

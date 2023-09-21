@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <button @click="flag = !flag">Toggle Flag</button>
+
+            <p v-if="flag"> Succss</p>
+            <p v-show="!flag"> Failure </p>
+        </div>
+    </body>
+
+    <script>
+        const vm = {
+            data: function(){
+                return{
+                    flag: false,
+                }
+            },
+        }
+
+        const app = Vue.createApp(vm)
+        app.mount('#app')
+    </script>
+</html>
