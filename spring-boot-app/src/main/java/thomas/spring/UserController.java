@@ -21,6 +21,9 @@ public class UserController {
         users.add(new User(LocalDate.now(), "Andy", "No. 192, Grove St, Los Angeles"));
         users.add(new User(LocalDate.now(), "Li", "No. 193, Grove St, Los Angeles"));
         users.add(new User(LocalDate.now(), "Wu", "No. 194, Grove St, Los Angeles"));
+/*        for(int i=0; i< 1000000; i++){
+            users.add(new User(LocalDate.now(), "Wu", "No. 194, Grove St, Los Angeles"));
+        }*/
         return users;
     }
 

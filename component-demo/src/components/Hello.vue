@@ -61,6 +61,7 @@ import axios from 'axios';
       },
       created: function(){
         axios.get("/users").then((response) => {
+            console.log('response.data: ' + response.data)
             this.tableData = response.data
         })
       },
