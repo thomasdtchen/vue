@@ -25,7 +25,7 @@ export default {
       userMessage: '',
       copiedUserMessage: '',
       messages: [],
-      apiKey: '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', // Replace with your ChatGPT API key
+      apiKey: '', // Replace with your ChatGPT API key
     };
   },
   directives: {
